@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: superlooperpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: superlooperpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: superlooperpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: superlooperpipelinesjavascriptdocker 
+          image: containerregistry1tan.azurecr.io/superlooperpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
